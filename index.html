@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪼 Dance of the Night Jellies 🪼</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top-Left: Grouped Music Controller & Return Button (Hidden initially) -->
+    <div id="ui-container" class="top-left hidden">
+        <div id="music-controller">
+            <span id="music-title">♪ Dancing of the night jellies</span>
+            <div class="music-controls">
+                <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.25" title="Adjust Volume">
+                <button id="mute-btn" title="Mute/Unmute">🔊</button>
+            </div>
+        </div>
+        <!-- Return Button placed directly below the music player -->
+        <button id="return-btn">↩ Return</button>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bg-music" src="moonjelly.mp3" preload="auto" loop></audio>
+
+    <!-- Glowing Full Moon in Top-Right -->
+    <div id="moon" class="hidden"></div>
+
+    <!-- The main container that centers everything -->
+    <div id="main-view">
+        <div id="gift-wrap">
+            <img src="giftbox.png" alt="A closed pixel art giftbox" id="giftbox-img">
+            
+            <!-- Reveal container now ONLY holds the beach image -->
+            <div id="reveal-container" class="hidden">
+                <img src="giftimg.png" alt="A serene night beach scene" id="gift-reveal-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Gentle Rising Water Tide (Appears when gift opens) -->
+    <div id="water-tide" class="hidden"></div>
+
+    <!-- Full-screen Jellyfish Spawn Container (in the background) -->
+    <div id="jelly-spawn-container"></div>
+
+    <!-- The background elements -->
+    <div class="background-layers">
+        <div class="stars"></div>
+    </div>
+    
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
